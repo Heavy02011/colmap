@@ -39,8 +39,10 @@ set(COLMAP_VERSION_NUMBER "3900")
 #rbx
 #NVIDIA A100: 8.0
 #NVIDIA V100: 7.0
-set(CMAKE_CUDA_ARCHITECTURES "native")
-set(CUDA_ARCHITECTURES "native")
+#set(CMAKE_CUDA_ARCHITECTURES "native")
+#set(CUDA_ARCHITECTURES "native")
+set(CMAKE_CUDA_ARCHITECTURES 70)
+
 #rbx
 
 ################################################################################
