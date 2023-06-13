@@ -37,7 +37,9 @@ set(COLMAP_VERSION "3.9")
 set(COLMAP_VERSION_NUMBER "3900")
 
 #rbx
-set_target_properties(tgt PROPERTIES CMAKE_CUDA_ARCHITECTURES "all-major")
+#NVIDIA A100: 8.0
+#NVIDIA V100: 7.0
+set_target_properties(tgt PROPERTIES CMAKE_CUDA_ARCHITECTURES "7.0")
 #rbx
 
 ################################################################################
