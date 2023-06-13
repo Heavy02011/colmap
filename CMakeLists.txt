@@ -36,6 +36,10 @@ project(COLMAP LANGUAGES C CXX)
 set(COLMAP_VERSION "3.9")
 set(COLMAP_VERSION_NUMBER "3900")
 
+#rbx
+set_target_properties(tgt PROPERTIES CMAKE_CUDA_ARCHITECTURES "all-major")
+#rbx
+
 ################################################################################
 # Include CMake dependencies
 ################################################################################
