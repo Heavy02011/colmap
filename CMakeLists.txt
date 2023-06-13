@@ -39,8 +39,8 @@ set(COLMAP_VERSION_NUMBER "3900")
 #rbx
 #NVIDIA A100: 8.0
 #NVIDIA V100: 7.0
-set_target_properties(tgt PROPERTIES CMAKE_CUDA_ARCHITECTURES "7.0")
-set_target_properties(tgt PROPERTIES CUDA_ARCHITECTURES "7.0")
+set_target_properties(tgt PROPERTIES CMAKE_CUDA_ARCHITECTURES "70")
+set_target_properties(tgt PROPERTIES CUDA_ARCHITECTURES "70")
 #rbx
 
 ################################################################################
