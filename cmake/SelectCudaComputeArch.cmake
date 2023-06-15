@@ -44,6 +44,9 @@
 #      Example:
 #       CUDA_SELECT_NVCC_ARCH_FLAGS(ARCH_FLAGS 3.0 3.5+PTX 5.2(5.0) Maxwell)
 #        LIST(APPEND CUDA_NVCC_FLAGS ${ARCH_FLAGS})
+CUDA_SELECT_NVCC_ARCH_FLAGS(ARCH_FLAGS 7.0 7.0+PTX)
+LIST(APPEND CUDA_NVCC_FLAGS ${ARCH_FLAGS})
+#
 #
 #      More info on CUDA architectures: https://en.wikipedia.org/wiki/CUDA
 #
