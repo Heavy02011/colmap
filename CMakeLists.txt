@@ -203,6 +203,13 @@ else()
     set(IS_DEBUG OFF)
 endif()
 
+if("${CMAKE_BUILD_TYPE}" STREQUAL "ClangTidy")
+    find_program(CLANG_TIDY_EXE NAMES clang-tidy)
+    if(NOT CLANG_TIDY_EXE)
+        message(FATAL_ERROR "Could not find the clang-tidy executable, please set CLANG_TIDY_EXE")
+    endif()
+endif()
+
 if(IS_MSVC)
     # Some fixes for the Glog library.
     add_definitions("-DGLOG_NO_ABBREVIATED_SEVERITIES")
@@ -298,7 +305,7 @@ else()
     message(STATUS "Disabling OpenGL support")
 endif()
 
-if(CCACHE_ENABLED)
+if(CCACHE_ENABLED AND NOT "${CMAKE_BUILD_TYPE}" STREQUAL "ClangTidy")
     find_program(CCACHE ccache)
     if(CCACHE)
         message(STATUS "Enabling ccache support")
