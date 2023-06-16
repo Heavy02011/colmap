@@ -316,7 +316,7 @@ function(CUDA_SELECT_NVCC_ARCH_FLAGS out_variable)
       # User explicitly specified ARCH for the concrete CODE
       #list(APPEND nvcc_flags -gencode arch=compute_${CMAKE_MATCH_2},code=sm_${CMAKE_MATCH_1})
       #list(APPEND nvcc_archs_readable sm_${CMAKE_MATCH_1})
-      list(APPEND nvcc_flags -gencode arch=compute_${arch},code=sm_70)
+      list(APPEND nvcc_flags -gencode arch=compute_70,code=sm_70)
       list(APPEND nvcc_archs_readable sm_70)
     else()
       # User didn't explicitly specify ARCH for the concrete CODE, we assume ARCH=CODE
